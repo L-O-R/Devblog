@@ -72,3 +72,18 @@ def post_list_api(request):
                 'created_at'))
     }
     return JsonResponse(data)
+
+
+def post_detail_api(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    
+    data= {
+        "post":{
+            "pk":post.pk,
+            "title": post.title,
+            "content": post.content
+        }
+    }
+    
+    return JsonResponse(data)
+     
