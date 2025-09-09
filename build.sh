@@ -8,6 +8,9 @@ pip install -r requirements.txt
 # Run our "shipping" command for static files
 python manage.py collectstatic --no-input
 
+# Run our database "construction" plan
+python manage.py migrate
+
 # for the creating superuser..
 python manage.py shell -c "
 from django.contrib.auth import get_user_model;
@@ -22,5 +25,3 @@ if not User.objects.filter(username=username).exists():
 else:
     print('Superuser already exists');
 "
-# Run our database "construction" plan
-python manage.py migrate
