@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>{{ post.title }}</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
 </head>
 
 <body>
@@ -19,7 +19,6 @@
             {{ post.content|linebreaks }}
         </div>
 
-        {% endif %}
     </div>
 
     <hr>
